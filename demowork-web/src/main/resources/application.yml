@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: web
+  profiles:
+    active: dev
+mybatis:
+  type-aliases-package: com.jlh.demoworkweb.model

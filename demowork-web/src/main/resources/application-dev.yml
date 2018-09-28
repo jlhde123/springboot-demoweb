@@ -1,0 +1,13 @@
+system:
+  env: dev
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.137.101:3306/demowork?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+logging:
+  level:
+    com.jlh.demoworkweb.mapper: DEBUG

@@ -3,6 +3,7 @@
 #### 项目介绍
 springboot的项目模版(完善中)<br/>
 有多个端时克隆web项目即可
+
 #### 软件架构
 1.  springboot、mybatis、redis、mysql
 2.  返回值处理机制

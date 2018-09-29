@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created with IntelliJ IDEA.
  * User: jiluohao
  * Date: 2018-09-28 11:10
- * Description:
+ * Description: 异常统一处理
  */
 @ControllerAdvice
 public class ExceptionHandlerAdvice {

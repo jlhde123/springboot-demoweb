@@ -6,7 +6,7 @@ import com.jlh.demowork.core.enums.ServerStatusEnums;
  * Created with IntelliJ IDEA.
  * User: jiluohao
  * Date: 2018-09-28 10:26
- * Description:
+ * Description: 基础服务器异常
  */
 public class ServerException extends AbstractException {
 

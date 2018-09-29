@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Created with IntelliJ IDEA.
  * User: jiluohao
  * Date: 2018-09-28 10:54
- * Description:
+ * Description: 包装返回的VO对象
  */
 public class RestReturnValueHandler implements HandlerMethodReturnValueHandler {
 

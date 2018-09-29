@@ -2,6 +2,7 @@ package com.jlh.demoworkweb.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.jlh.demowork.core.exceptions.UnAuthorizedException;
 import com.jlh.demowork.core.http.PageRequestDTO;
 import com.jlh.demoworkweb.mapper.UserMapper;
 import com.jlh.demoworkweb.model.User;
@@ -28,4 +29,10 @@ public class UserController {
                 .pageSize(1)
         ).doSelectPageInfo(()->userMapper.findAll());
     }
+
+    @GetMapping("/unauth")
+    public String getUnauth(){
+        throw new UnAuthorizedException("msg","developer");
+    }
+
 }

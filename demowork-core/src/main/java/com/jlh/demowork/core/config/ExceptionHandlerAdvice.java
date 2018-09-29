@@ -34,7 +34,7 @@ public class ExceptionHandlerAdvice {
     @ResponseBody
     public HttpResponseDTO restAbstractException(HttpServletRequest request, HttpServletResponse response, Exception ex){
         AbstractException abstractException = (AbstractException) ex;
-        logger.error("server error msg="+abstractException.getErrorEnum().getContent(),ex);
+        logger.error("server error msg="+abstractException.getErrorEnum().getContent()+";developerMsg="+abstractException.getDeveloperMsg(),ex);
         return HttpResponseDTO.build(abstractException.getErrorEnum(),null,ex.getMessage());
     }
 

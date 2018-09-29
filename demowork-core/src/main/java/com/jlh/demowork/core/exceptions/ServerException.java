@@ -29,6 +29,22 @@ public class ServerException extends AbstractException {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 
+    public ServerException(String message, String developerMsg) {
+        super(message, developerMsg);
+    }
+
+    public ServerException(String message, Throwable cause, String developerMsg) {
+        super(message, cause, developerMsg);
+    }
+
+    public ServerException(Throwable cause, String developerMsg) {
+        super(cause, developerMsg);
+    }
+
+    public ServerException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, String developerMsg) {
+        super(message, cause, enableSuppression, writableStackTrace, developerMsg);
+    }
+
     public ServerStatusEnums getErrorEnum() {
         return ServerStatusEnums.ServerError;
     }

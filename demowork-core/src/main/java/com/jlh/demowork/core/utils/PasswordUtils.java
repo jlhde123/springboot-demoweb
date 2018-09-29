@@ -1,10 +1,8 @@
 package com.jlh.demowork.core.utils;
 
-import com.jlh.demowork.core.exceptions.AbstractException;
 import com.jlh.demowork.core.exceptions.ServerException;
 
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 
 /**

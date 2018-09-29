@@ -8,6 +8,8 @@ package com.jlh.demowork.core.enums;
  */
 public enum ServerStatusEnums {
     ServerSuccess(200,"请求成功"),
+    BadRequest(400,"错误请求"),
+    UnAuthorized(401,"未授权"),
     ServerError(500,"服务器异常");
     private Integer code;
     private String content;

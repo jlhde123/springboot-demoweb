@@ -1,14 +1,13 @@
 package com.jlh.demowork.core.utils;
 
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
- * User: jiluohao@yixin.im
+ * User: jiluohao
  * Date: 2018-09-28 16:21
  * Description: redis缓存管理
  */
@@ -56,5 +55,6 @@ public class RedisManager {
     public Long ttl(String key){
         return redisTemplate.getExpire(key,TimeUnit.MICROSECONDS);
     }
+
 
 }

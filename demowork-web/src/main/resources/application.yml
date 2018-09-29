@@ -3,10 +3,5 @@ spring:
     name: web
   profiles:
     active: dev
-  redis:
-    database: 0
-    host: 192.168.137.101
-    port: 6379
-    password:
 mybatis:
   type-aliases-package: com.jlh.demoworkweb.model

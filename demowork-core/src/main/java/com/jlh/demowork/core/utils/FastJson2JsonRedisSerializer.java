@@ -10,7 +10,7 @@ import java.nio.charset.Charset;
 
 /**
  * Created with IntelliJ IDEA.
- * User: jiluohao@yixin.im
+ * User: jiluohao
  * Date: 2018-09-29 10:00
  * Description:
  */

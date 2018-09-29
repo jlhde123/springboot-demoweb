@@ -1,6 +1,5 @@
 package com.jlh.demowork.core.config;
 
-import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.jlh.demowork.core.utils.FastJson2JsonRedisSerializer;
 import com.jlh.demowork.core.utils.RedisManager;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
- * User: jiluohao@yixin.im
+ * User: jiluohao
  * Date: 2018-09-28 17:25
  * Description:
  */

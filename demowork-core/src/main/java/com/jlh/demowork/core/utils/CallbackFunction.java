@@ -2,7 +2,7 @@ package com.jlh.demowork.core.utils;
 
 /**
  * Created with IntelliJ IDEA.
- * User: jiluohao@yixin.im
+ * User: jiluohao
  * Date: 2018-09-28 17:03
  * Description:
  */

@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,6 +16,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * Date: 2018-09-28 17:25
  * Description:
  */
+@Repository
 @Configuration
 public class CacheConfiguration {
 

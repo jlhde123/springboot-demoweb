@@ -11,6 +11,7 @@ import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -25,14 +26,24 @@ public class DemoworkWebApplicationTests {
     @Test
     public void contextLoads() {
 
-        List<User> users= redisManager.getIfNullSet("key5",()-> userMapper.findAll());
+        List<User> users= redisManager.getIfNullSet("key6",()-> userMapper.findAll());
 
-        System.out.println(users);
+        users.forEach(m->{
+            System.out.println(m.getUserAccount());
+            System.out.println(m.getCreateTime());
+            System.out.println(m.getId());
+            System.out.println(m.getPasswd());
+        });
 
 
-        List<List<User>> users1 = redisManager.mget(Arrays.asList("key4","key5"));
+        List<List<User>> users1 = redisManager.mget(Arrays.asList("key4","key5","key5"));
 
-        System.out.println(users1);
+        users1.stream().flatMap(Collection::stream).forEach(m->{
+            System.out.println(m.getUserAccount());
+            System.out.println(m.getCreateTime());
+            System.out.println(m.getId());
+            System.out.println(m.getPasswd());
+        });
     }
 
 

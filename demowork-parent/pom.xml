@@ -42,6 +42,11 @@
                 <artifactId>mybatis-typehandlers-jsr310</artifactId>
                 <version>1.0.2</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.7</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -1,12 +1,12 @@
 package com.jlh.demoworkweb.controller;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.jlh.demoworkweb.mapper.UserMapper;
 import com.jlh.demoworkweb.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,7 +21,7 @@ public class UserController {
     private UserMapper userMapper;
 
     @GetMapping("/user")
-    public List<User> getUser(){
-        return userMapper.findAll();
+    public Page<User> getUser(){
+        return PageHelper.startPage(0,10).doSelectPage(()->userMapper.findAll());
     }
 }

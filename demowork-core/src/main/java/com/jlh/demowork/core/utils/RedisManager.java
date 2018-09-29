@@ -20,10 +20,17 @@ public class RedisManager {
     }
 
     public <T> T getIfNullSet(String key, CallbackFunction<T> callbackFunction){
+        return getIfNullSet(key,-1,callbackFunction);
+    }
+    public <T> T getIfNullSet(String key,long timeOut,CallbackFunction<T> callbackFunction){
         T t= (T) redisTemplate.opsForValue().get(key);
         if (t == null){
             t = callbackFunction.call();
-            redisTemplate.opsForValue().set(key,t);
+            if (timeOut == -1) {
+                redisTemplate.opsForValue().set(key, t);
+            }else {
+                redisTemplate.opsForValue().set(key,t,timeOut,TimeUnit.MICROSECONDS);
+            }
         }
         return t;
     }

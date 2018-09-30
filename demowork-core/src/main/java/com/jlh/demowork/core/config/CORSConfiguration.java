@@ -1,6 +1,8 @@
 package com.jlh.demowork.core.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -13,8 +15,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CORSConfiguration implements WebMvcConfigurer {
 
+    @Value("${cors.addrs}")
+    private String corsAddrs;
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
+        if (!StringUtils.isEmpty(corsAddrs)){
+            registry.addMapping("/**")
+            .allowedOrigins(corsAddrs.split(","));
+        }else {
+            registry.addMapping("/**");
+        }
     }
 }

@@ -16,3 +16,8 @@ spring:
 logging:
   level:
     com.jlh.demoworkweb.mapper: DEBUG
+
+
+cors:
+#  addrs: http://localhost:8081,http://localhost:8082
+  addrs:

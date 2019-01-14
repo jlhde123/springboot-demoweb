@@ -1,9 +1,7 @@
 package com.jlh.demoworkweb.controller;
 
-import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.jlh.demowork.core.exceptions.UnAuthorizedException;
-import com.jlh.demowork.core.http.PageRequestDTO;
 import com.jlh.demoworkweb.mapper.UserMapper;
 import com.jlh.demoworkweb.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +22,11 @@ public class UserController {
 
     @GetMapping("/user")
     public PageInfo<User> getUser(){
-        return PageHelper.startPage(PageRequestDTO.builder()
-                .pageNum(1)
-                .pageSize(1)
-        ).doSelectPageInfo(()->userMapper.findAll());
+//        return PageHelper.startPage(PageRequestDTO.builder()
+//                .pageNum(1)
+//                .pageSize(10)
+//        ).doSelectPageInfo(()->userMapper.findAll());
+        return null;
     }
 
     @GetMapping("/unauth")

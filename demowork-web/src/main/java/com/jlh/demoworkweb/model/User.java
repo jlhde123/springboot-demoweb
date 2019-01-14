@@ -1,9 +1,12 @@
 package com.jlh.demoworkweb.model;
 
-import lombok.Data;
-
-import java.sql.Timestamp;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
+
+import lombok.Data;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,10 +15,12 @@ import java.time.LocalDateTime;
  * Description:
  */
 @Data
+@Table(name = "user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userAccount;
-    private String passwd;
+    private String username;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
     private Integer state;

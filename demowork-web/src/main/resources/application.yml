@@ -5,3 +5,5 @@ spring:
     active: dev
 mybatis:
   type-aliases-package: com.jlh.demoworkweb.model
+mapper:
+  style: normal

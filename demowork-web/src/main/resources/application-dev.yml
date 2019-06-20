@@ -3,15 +3,15 @@ system:
 
 spring:
   redis:
-    database: 0
-    host: 192.168.137.101
-    port: 6379
-    password:
+    database: 1
+    host: 10.216.32.54
+    port: 32548
+    password: test
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.137.101:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.99.100:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: 123456
+    password: my-secret-pw
 
 logging:
   level:

@@ -1,8 +1,9 @@
 package com.jlh.demoworkweb;
 
-import com.alibaba.fastjson.JSON;
 import com.jlh.demowork.core.utils.RedisManager;
+import com.jlh.demowork.core.utils.TransactionUtils;
 import com.jlh.demoworkweb.mapper.UserMapper;
+import com.jlh.demoworkweb.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,28 @@ public class DemoworkWebApplicationTests {
     private RedisManager redisManager;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private TransactionUtils transactionUtils;
 
     @Test
     public void contextLoads() {
 
 
-        System.out.println(JSON.toJSONString(userMapper.getById(2L)));
+        transactionUtils.exec(() -> {
+            User user = new User();
+            user.setState(1);
+            user.setUsername("jlh2");
+            userMapper.insert(user);
+
+            user = new User();
+            user.setState(1);
+            user.setUsername("jlh3");
+            userMapper.insert(user);
+            return 1;
+        });
+
+
+        System.out.println(userMapper.selectAll());
 
 //        userMapper.
 //        User user = new User();

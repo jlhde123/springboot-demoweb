@@ -2,6 +2,7 @@ package com.jlh.demoworkweb.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.jlh.demowork.core.exceptions.UnAuthorizedException;
+import com.jlh.demowork.core.http.PageRequestDTO;
 import com.jlh.demoworkweb.mapper.UserMapper;
 import com.jlh.demoworkweb.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ public class UserController {
 //                .pageNum(1)
 //                .pageSize(10)
 //        ).doSelectPageInfo(()->userMapper.findAll());
+        PageRequestDTO pageRequestDTO = new PageRequestDTO();
         return null;
     }
 

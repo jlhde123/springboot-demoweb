@@ -25,25 +25,6 @@ public class BadRequestException extends AbstractException{
         super(cause);
     }
 
-    public BadRequestException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
-
-    public BadRequestException(String message, String developerMsg) {
-        super(message, developerMsg);
-    }
-
-    public BadRequestException(String message, Throwable cause, String developerMsg) {
-        super(message, cause, developerMsg);
-    }
-
-    public BadRequestException(Throwable cause, String developerMsg) {
-        super(cause, developerMsg);
-    }
-
-    public BadRequestException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, String developerMsg) {
-        super(message, cause, enableSuppression, writableStackTrace, developerMsg);
-    }
 
     @Override
     public ServerStatusEnums getErrorEnum() {

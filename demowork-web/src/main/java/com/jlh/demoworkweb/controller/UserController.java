@@ -33,7 +33,8 @@ public class UserController {
 
     @GetMapping("/unauth")
     public String getUnauth(){
-        throw new UnAuthorizedException("msg","developer");
+        throw new UnAuthorizedException("msg")
+                .withDeveloperMsg("developer");
     }
 
 }

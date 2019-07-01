@@ -32,28 +32,9 @@ public abstract class AbstractException extends RuntimeException {
         super(cause);
     }
 
-    public AbstractException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
-    }
-
-    public AbstractException(String message, String developerMsg) {
-        super(message);
+    public AbstractException withDeveloperMsg(String developerMsg){
         this.developerMsg = developerMsg;
-    }
-
-    public AbstractException(String message, Throwable cause, String developerMsg) {
-        super(message, cause);
-        this.developerMsg = developerMsg;
-    }
-
-    public AbstractException(Throwable cause, String developerMsg) {
-        super(cause);
-        this.developerMsg = developerMsg;
-    }
-
-    public AbstractException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, String developerMsg) {
-        super(message, cause, enableSuppression, writableStackTrace);
-        this.developerMsg = developerMsg;
+        return this;
     }
 
     public abstract ServerStatusEnums getErrorEnum();
